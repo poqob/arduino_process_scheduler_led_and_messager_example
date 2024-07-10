@@ -19,7 +19,6 @@ public:
     return _output;
   }
 
-private:
   
   
   

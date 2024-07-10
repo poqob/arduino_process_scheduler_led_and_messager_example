@@ -1,4 +1,4 @@
-
+#include <ProcessScheduler.h>
 class MessageProcess : public Process
 {
   String msg;
