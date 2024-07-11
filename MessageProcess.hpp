@@ -1,3 +1,4 @@
+#include "Arduino.h"
 #include <ProcessScheduler.h>
 class MessageProcess : public Process
 {
