@@ -61,7 +61,9 @@ protected:
 
       long duration = pulseIn(echoPin, HIGH);
       float distance = (duration / 29.1) / 2;
-      Serial.print("distance: ");
+      Serial.print("distance-from(");
+      Serial.print(echoPin);
+      Serial.print(")");
       Serial.println(distance);
     }
   }
