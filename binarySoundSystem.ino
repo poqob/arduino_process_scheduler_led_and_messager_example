@@ -4,6 +4,7 @@
 #include "MessageProcess.hpp"
 #include "DistanceSensor.hpp"
 #include "SerialListener.hpp"
+#include "ServoProcess.hpp"
 
 
 Scheduler sched; // Create a global Scheduler object
@@ -18,7 +19,7 @@ MessageProcess msg2(sched, HIGH_PRIORITY, 1000, RUNTIME_FOREVER,"third");
 SerialListener ser(sched, HIGH_PRIORITY, 1000, RUNTIME_FOREVER);
 DistanceProcess dst0(sched, HIGH_PRIORITY, 5, RUNTIME_FOREVER,3,2);
 DistanceProcess dst1(sched, HIGH_PRIORITY, 5, RUNTIME_FOREVER,5,4);
-
+ServoProcess srv0(sched, MEDIUM_PRIORITY, 15, RUNTIME_FOREVER,11);
 void setup() 
 {
 
@@ -28,6 +29,7 @@ void setup()
     dst0.add(true);
     dst1.add(true);
     ser.add(true);
+    srv0.add(true);
 
 }
 
